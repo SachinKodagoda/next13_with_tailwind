@@ -1,6 +1,6 @@
+import { ExternalLink } from "#/components/ExternalLink";
+import { ProductCard } from "#/components/product/ProductCard";
 import products from "#/data/products";
-import { ExternalLink } from "#/ui/ExternalLink";
-import { ProductCard } from "#/ui/ProductCard";
 
 export default async function Page() {
   return (
@@ -31,9 +31,7 @@ export default async function Page() {
             </li>
           </ul>
 
-          <ExternalLink href="https://beta.nextjs.org/docs/data-fetching/streaming-and-suspense">
-            Docs
-          </ExternalLink>
+          <ExternalLink href="#">Docs</ExternalLink>
         </div>
       </div>
 
@@ -42,7 +40,7 @@ export default async function Page() {
           <div key={product.id} className="col-span-4 lg:col-span-1">
             <ProductCard
               product={product}
-              href={`/streaming/product/${product.id}`}
+              href={`/main/product/${product.id}`}
             />
           </div>
         ))}
